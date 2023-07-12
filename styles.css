@@ -28,6 +28,7 @@ textarea{
     height: 250px;
     background: #403d84;
     color: white;
+    font-size: 15px;
     border: 0;
     outline: 0;
     padding: 20px;
@@ -37,4 +38,19 @@ textarea{
 }
 Textarea::placeholder {
     color: yellow;
+    font-size: 15px;
+}
+.row{
+    width: 600px;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+button{
+    background: #ff2965;
+    color: white;
+    font-size: 15px;
+    border: 0;
+    outline: 0;
+    cursor: pointer;
 }
