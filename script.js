@@ -18,6 +18,8 @@ voiceSelect.addEventListener("change", ()=>{
 //button click event to convert text to speech or pause/resume
 const button = document.querySelector("button");
 const textarea = document.querySelector("textarea");
+const playIcon = document.querySelector(".play-icon");
+const pauseIcon = document.querySelector(".pause-icon");
 
 button.addEventListener("click", ()=>{
     if (!isPaused){
