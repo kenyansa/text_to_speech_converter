@@ -15,6 +15,8 @@ The app does not need any installations to work.
 There are no known bugs.
 ## :pushpin: BDD
 Upon clicking the listen button, the app starts the conversion proess. You can adjust the rate and pitch before clicking it, after choosing the voice-language. 
+## Screenshot:
+![Text-to-speech converter](newApp.PNG)
 ## :computer: Technologies Used
  The project used HTML, css, and Vanilla JS.
  ## :telephone_receiver: Support and contact details
