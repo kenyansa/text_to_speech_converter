@@ -1,4 +1,5 @@
 let utterance = new SpeechSynthesisUtterance(); // create SpeechSynthesisUtterance object
+let isPaused = false;
 
 let voices = [];
 let voiceSelect = document.querySelector("select")
@@ -15,20 +16,33 @@ voiceSelect.addEventListener("change", ()=>{
 })
 
 //button click event to convert text to speech or pause/resume
-let isPaused = false;
-document.querySelector("button").addEventListener("click", ()=>{
-    if(!isPaused){
-        //set the text
-        utterance.text = document.querySelector("textarea").value;
-        speechSynthesis.speak(utterance);
-    }else{
-        if(speechSynthesis.paused){
-            speechSynthesis.resume();
-            isPaused = false;
-        }else {
+const button = document.querySelector("button");
+const textarea = document.querySelector("textarea");
+
+button.addEventListener("click", ()=>{
+    if (!isPaused){
+        if (speechSynthesis.speaking){
+            //pause the speech
             speechSynthesis.pause();
             isPaused = true;
+            button.textContent = "Resume";
         }
     }
+})
+
+// document.querySelector("button").addEventListener("click", ()=>{
+//     if(!isPaused){
+//         //set the text
+//         utterance.text = document.querySelector("textarea").value;
+//         speechSynthesis.speak(utterance);
+//     }else{
+//         if(speechSynthesis.paused){
+//             speechSynthesis.resume();
+//             isPaused = false;
+//         }else {
+//             speechSynthesis.pause();
+//             isPaused = true;
+//         }
+//     }
     
-});
+// });
