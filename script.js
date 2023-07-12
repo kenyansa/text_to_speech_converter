@@ -27,18 +27,21 @@ button.addEventListener("click", ()=>{
             //pause the speech
             speechSynthesis.pause();
             isPaused = true;
-            button.textContent = "Resume";
+            playIcon.style.display = "inline";
+            pauseIcon.style.display = "none";
         }else {
             //set the text
             utterance.text = textarea.value;
             speechSynthesis.speak(utterance);
-            button.textContent = "Pause";
+            playIcon.style.display = "none";
+            pauseIcon.style.display = "inline";
         }
     }else {
         //resume the speech
         speechSynthesis.resume();
         isPaused = false;
-        button.textContent = "Pause";
+        playIcon.style.display = "none";
+        pauseIcon.style.display = "inline";
     }
 });
 
