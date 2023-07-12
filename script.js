@@ -26,9 +26,19 @@ button.addEventListener("click", ()=>{
             speechSynthesis.pause();
             isPaused = true;
             button.textContent = "Resume";
+        }else {
+            //set the text
+            utterance.text = textarea.value;
+            speechSynthesis.speak(utterance);
+            button.textContent = "Pause";
         }
+    }else {
+        //resume the speech
+        speechSynthesis.resume();
+        isPaused = false;
+        button.textContent = "Pause";
     }
-})
+});
 
 // document.querySelector("button").addEventListener("click", ()=>{
 //     if(!isPaused){
