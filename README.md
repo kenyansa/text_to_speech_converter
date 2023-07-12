@@ -1,6 +1,6 @@
 # text_to_speech_converter
 ### version 1.0.0
-This app generates English text to speech. Uses...
+This app generates English text to speech. Uses  SpeechSynthesisUtterance() javascript API for text-to-speech conversion. <br>It comes with functionalities for pitch and speech rate control.
 
 ## Contributors
 The project was developed by Justine Kenyansa.
