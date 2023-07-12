@@ -10,9 +10,11 @@ speechSynthesis.onvoiceschanged = ()=>{
     voices.forEach((voice, i)=>(voiceSelect.options[i] = new Option(voice.name, i) ));
 }
 
+voiceSelect.addEventListener("change", ()=>{
+    utterance.voice = voices[voiceSelect.value];
+})
 document.querySelector("button").addEventListener("click", ()=>{
     // Set the text and language
     utterance.text = document.querySelector("textarea").value;
-    utterance.lang = 'en-US';
     speechSynthesis.speak(utterance);
 })
