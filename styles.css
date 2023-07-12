@@ -49,8 +49,27 @@ Textarea::placeholder {
 button{
     background: #ff2965;
     color: white;
-    font-size: 15px;
+    font-size: 18px;
+    padding: 10px 30px;
     border: 0;
     outline: 0;
     cursor: pointer;
+    border-radius: 35px;
+    display: flex;
+    align-items: center;
+}
+button img{
+    height: 100%;
+    margin-right: 10px;
+    width: 18px;
+}
+select{
+    flex: 1;
+    color: white;
+    background: #403d84;
+    height: 50px;
+    padding: 0 20px;
+    outline: 0;
+    border: 0;
+    border-radius: 35px;
 }
