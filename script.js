@@ -32,6 +32,9 @@ button.addEventListener("click", ()=>{
         }else {
             //set the text
             utterance.text = textarea.value;
+            //set the rate and pitch
+            utterance.rate = parseFloat(document.getElementById("rate").value);
+            utterance.pitch = parseFloat(document.getElementById("pitch").value);
             speechSynthesis.speak(utterance);
             playIcon.style.display = "none";
             pauseIcon.style.display = "inline";
