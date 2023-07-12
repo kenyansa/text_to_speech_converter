@@ -3,6 +3,13 @@ let isPaused = false;
 
 let voices = [];
 let voiceSelect = document.querySelector("select")
+const textarea = document.querySelector("textarea");
+
+//local the saved text from local storage
+const savedText = localStorage.getItem("savedText");
+if(savedText){
+    textarea.value = savedText;
+}
 
 speechSynthesis.onvoiceschanged = ()=>{
     voices = speechSynthesis.getVoices();
@@ -17,7 +24,6 @@ voiceSelect.addEventListener("change", ()=>{
 
 //button click event to convert text to speech or pause/resume
 const button = document.querySelector("button");
-const textarea = document.querySelector("textarea");
 const playIcon = document.querySelector(".play-icon");
 const pauseIcon = document.querySelector(".pause-icon");
 
@@ -47,6 +53,11 @@ button.addEventListener("click", ()=>{
         pauseIcon.style.display = "inline";
     }
 });
+
+//save the text in the textarea to local storage
+textarea.addEventListener("input", ()=>{
+    localStorage.setItem("savedText", textarea.value);
+})
 
 // document.querySelector("button").addEventListener("click", ()=>{
 //     if(!isPaused){
